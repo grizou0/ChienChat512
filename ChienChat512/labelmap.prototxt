@@ -1,0 +1,110 @@
+item {
+  name: "none_of_the_above"
+  label: 0
+  display_name: "background"
+}
+item {
+  name: "chat"
+  label: 1
+  display_name: "chat"
+}
+item {
+  name: "chien"
+  label: 2
+  display_name: "chien"
+}
+item {
+  name: "R3"
+  label: 3
+  display_name: "R3"
+}
+item {
+  name: "R4"
+  label: 4
+  display_name: "R4"
+}
+item {
+  name: "R5"
+  label: 5
+  display_name: "R5"
+}
+item {
+  name: "R6"
+  label: 6
+  display_name: "R6"
+}
+item {
+  name: "R7"
+  label: 7
+  display_name: "R7"
+}
+item {
+  name: "R8"
+  label: 8
+  display_name: "R8"
+}
+item {
+  name: "R9"
+  label: 9
+  display_name: "R9"
+}
+item {
+  name: "R10"
+  label: 10
+  display_name: "R10"
+}
+item {
+  name: "R11"
+  label: 11
+  display_name: "R11"
+}
+item {
+  name: "R12"
+  label: 12
+  display_name: "R12"
+}
+item {
+  name: "R13"
+  label: 13
+  display_name: "R13"
+}
+item {
+  name: "R14"
+  label: 14
+  display_name: "R14"
+}
+item {
+  name: "R15"
+  label: 15
+  display_name: "R15"
+}
+item {
+  name: "R16"
+  label: 16
+  display_name: "R16"
+}
+item {
+  name: "R17"
+  label: 17
+  display_name: "R17"
+}
+item {
+  name: "R18"
+  label: 18
+  display_name: "R18"
+}
+item {
+  name: "R19"
+  label: 19
+  display_name: "R19"
+}
+item {
+  name: "R20"
+  label: 20
+  display_name: "R20"
+}
+item {
+  name: "R21"
+  label: 21
+  display_name: "R21"
+}
