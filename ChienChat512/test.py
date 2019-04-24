@@ -11,7 +11,7 @@ parser.add_argument("--prototxt", default="example/MobileNetSSD_deploy.prototxt"
                                   help='Path to text network file: '
                                        'MobileNetSSD_deploy.prototxt for Caffe model or '
                                        )
-parser.add_argument("--weights", default="snapshot/_iter_1000.caffemodel",
+parser.add_argument("--weights", default="snapshot/_iter_21420.caffemodel",
                                  help='Path to weights: '
                                       'MobileNetSSD_deploy.caffemodel for Caffe model or '
                                       )
@@ -20,15 +20,11 @@ args = parser.parse_args()
 
 # Labels of Network.
 classNames = { 0: 'background',
-    1: 'chat', 2: 'chien', 3: 'johan', 4: 'trinh',
-    5: 'alexandre', 6: 'jp', 7: 'inconnu', 8: 'voiture', 9: 'R9',
-    10: 'R10', 11: 'R11', 12: 'R12', 13: 'R13',
-    14: 'R14', 15: 'R15', 16: 'R16',
-    17: 'R17', 18: 'R18', 19: 'R19', 20: 'A', 21: 'B', 22: 'C', 23:'D', 24:'E', 25:'F', 26:'G', 27:'H',
-    28:'I', 29:'J', 30:'K', 31:'L', 32:'M', 33:'N', 34:'O', 35:'P', 36:'Q', 37:'R', 38:'S', 39:'T', 40:'U',
-   41:'V', 42:'W', 43:'X', 44:'Y', 45:'Z', 46:'a', 47:'b', 48:'c', 49:'d', 50:'e', 51:'f', 52:'g', 53:'h', 54:'i', 55:'j', 56:'k',
-   57:'l', 58:'m', 59:'n', 60:'o', 61:'p', 62:'q', 63:'r', 64:'s', 65:'t', 66:'u', 67:'v', 68:'w', 69:'x', 70:'y', 71:'z', 72:'0',
-   73:'1', 74:'2', 75:'3', 76:'4', 77:'5', 78:'6', 79:'7', 80:'8', 81:'9' , 82:'R82'}
+    1:'chat',2:'chien',3:'johan',4:'trinh',5:'alexandre',6:'jp',7:'inconnu',8:'R8',9:'R9',10:'R10',11:'R11',12:'R12',13:'R13',14:'R14',15:'R15',16:'R16',17:'R17',18:'R18',19:'R19',
+    20:'A',21:'B',22:'C',23:'D',24:'E',25:'F',26:'G',27:'H',28:'I',29:'J',30:'K',31:'L',32:'M',33:'N',34:'O',35:'P',36:'Q',37:'R',38:'S',39:'T',
+    40:'U',41:'V',42:'W', 43:'X',44:'Y',45:'Z',46:'a',47:'b',48:'c',49:'d',50:'e', 51:'f', 52:'g', 53:'h', 54:'i', 55:'j', 56:'k',57:'l',58:'m',59:'n',
+    60:'o',61:'p',62:'q',63:'r',64:'s', 65:'t', 66:'u', 67:'v', 68:'w',69:'x',70:'y',71:'z',72:'0',73:'1',74:'2',75:'3',76:'4',77:'5',78:'6',79:'7',
+    80:'8',81:'9',82:'voitureAV',83:'voitureAR',84:'voiture'}
 
 # Open video file or capture device. 
 if args.video:
@@ -65,7 +61,7 @@ while True:
     # value in @detections array .
     for i in range(detections.shape[2]):
         confidence = detections[0, 0, i, 2] #Confidence of prediction 
-        if confidence > 0.4: #args.thr: # Filter prediction 
+        if confidence > 0.1: #args.thr: # Filter prediction 
             class_id = int(detections[0, 0, i, 1]) # Class label
 
             # Object location 
